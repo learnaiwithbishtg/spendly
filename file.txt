@@ -24,3 +24,19 @@ landing.html.
 footer link href from "#" to "/terms".
 
 git commit -m "Landing: add terms and conditions page and route"
+
+Do the same as you did for Terms and conditions page,
+but for Privacy Policy.
+
+1. Add a new route in [@app.py](http://app.py/):
+GET /Privacy -> renders templates/privacy.html
+2. Create templates/privacy.html with generic terms and conditions
+content appropriate for a personal expense tracking app.
+Include sections like: Data We Collect, Now we Use Your Data, 
+Data Storage,Third Party Service, and Contact Us. 
+Match the style of terms.html.
+3. In @templates/landing.html, update the "Privacy Policy"
+footer link href from "#" to "/privacy".
+4. Make sure the appearence looks like the website's theme
+
+git commit -m "Landing: add privacy policy page and route"
