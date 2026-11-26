@@ -190,7 +190,10 @@ a { color: inherit; text-decoration: none; }
     background: var(--ink);
     color: var(--paper);
     padding: 0.95rem 2rem;
+    border: none;
     border-radius: 10px;
+    font-family: var(--font-body);
+    cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
     transition: background 0.2s;
@@ -311,6 +314,78 @@ a { color: inherit; text-decoration: none; }
 .hero-bar-food { width: 72%; background: #e8a545; }
 .hero-bar-travel { width: 48%; background: #4a86d8; }
 .hero-bar-bills { width: 38%; background: #7f6fd6; }
+
+/* ------------------------------------------------------------------ */
+/* Demo modal                                                          */
+/* ------------------------------------------------------------------ */
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(15, 15, 15, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.modal[hidden] { display: none; }
+
+.modal-dialog {
+    position: relative;
+    background: var(--paper-card);
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 860px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-title {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0 2.5rem 1rem 0.25rem;
+}
+
+.modal-close {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 36px;
+    height: 36px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    font-size: 1.75rem;
+    line-height: 1;
+    color: var(--ink-muted);
+    cursor: pointer;
+}
+
+.modal-close:hover {
+    background: var(--paper);
+    color: var(--ink);
+}
+
+.modal-video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+    border-radius: var(--radius-sm);
+    overflow: hidden;
+}
+
+.modal-video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
 
 /* ------------------------------------------------------------------ */
 /* Buttons                                                             */
